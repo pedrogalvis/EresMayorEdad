@@ -1,0 +1,50 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package eresmayoredad.eresmayoredad;
+import java.io.InputStream;
+import java.util.Scanner;
+/**
+ * @author Pedro G
+ */
+public class EresMayorEdad {
+//Este string para pedir Nombre y edad por teclado
+   //la clase scanner lee los datos por teclado
+    public static void main(String[]args){
+        
+    Scanner digita =  new Scanner(System.in);
+    
+//se declara una variabla del tipo String que va a leer datos de tipo cadena o string
+    System.out.print("Ingresa tu Nombre: ");
+    String nombre = digita.nextLine();
+        
+//otro mensaje para pedir la edad
+   //se declara una variabla del tipo int que va a leer datos de tipo número enteros
+    System.out.print("Ingresa tu Edad: ");
+        int edad = digita.nextInt();
+    
+//genero las condiciones del flujo
+    // si edad esta entre 1 y 100 años
+    if(edad >= 1 && edad <=100) {
+        //nueva condición anidada menor de edad y niño entre 1 y 11 años
+        if(edad < 12) {
+        //genero mensaje
+            System.out.println(nombre+" de "+edad+" años es menor de edad, es un niño");
+        }
+        //menor de edad y adolescente entre 12 y 17 años
+        else if(edad < 18) {
+            System.out.println(nombre+" de "+edad+" años es menor de edad, es un adolescente");
+        }
+         //mayor de edad y adulto de m+as de 18 años
+        else if(edad >= 18) {
+            System.out.println(nombre+" de "+edad+" años es mayor de edad, es un adulto");
+            }
+        }
+//si no se cumple ninguna condición se genera un error
+    else {
+        System.err.println("Edad errónea, no està en el rango entre 1 y 100 años");
+    }
+  }
+}
+//comprobamos en la consola
